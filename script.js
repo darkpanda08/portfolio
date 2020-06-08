@@ -12,7 +12,7 @@ $(document).ready(function(){
         var first_name = $('#grid-first-name').val();
         var last_name = $('#grid-last-name').val();
         var email = $('#grid-email').val();
-        var text = $('#grid-text').val();
+        var message = $('#grid-text').val();
         
         $.ajax({
             method: 'POST',
@@ -21,7 +21,7 @@ $(document).ready(function(){
                 first_name:first_name, 
                 last_name: last_name,
                 email: email,
-                text: text
+                message: message
             }
         }).done(() => {
             $('#contact-form').trigger("reset");
