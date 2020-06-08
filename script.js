@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     // To close Alert
     $("#alert-close").click(() => {
-        $('#alert').hide();
+        $('#alert').fadeOut("slow");
     });
 
     // To post form data to firebase
