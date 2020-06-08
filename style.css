@@ -1,3 +1,7 @@
 .font-courgette{
     font-family: 'Courgette', cursive;
 }
+
+#alert {
+    display: none;
+}

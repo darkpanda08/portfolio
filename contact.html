@@ -39,25 +39,25 @@
           <span class="inline-block align-middle mr-8">
             <b class="capitalize">Yayyy !!</b> Your message has been sent.
           </span>
-          <button class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none" onclick="closeAlert()">
+          <button class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none" id="alert-close">
             <span>×</span>
           </button>
         </div>
 
         <h1 class="title-font sm:text-5xl text-4xl mb-4 font-medium text-gray-900 font-courgette">Contact Me</h1>
-        <form class="w-full max-w-2xl" id="contact-form" method="POST" action="https://us-central1-my-portfolio-b1b64.cloudfunctions.net/helloWorld/">
+        <form class="w-full max-w-2xl" id="contact-form">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 First Name
               </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="first-name" name="first_name" type="text" placeholder="First Name" required>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" name="first_name" type="text" placeholder="First Name" required>
             </div>
             <div class="w-full md:w-1/2 px-3">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                 Last Name
               </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="last-name" name="last_name" type="text" placeholder="Last Name" required>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" name="last_name" type="text" placeholder="Last Name" required>
             </div>
           </div>
           <div class="flex flex-wrap -mx-3 mb-6">
@@ -65,7 +65,7 @@
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
                 Email
               </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email" placeholder="Email" required>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" name="email" type="email" placeholder="Email" required>
               <p class="text-gray-600 text-xs italic">I won't share your Email with anyone.</p>
             </div>
           </div>
@@ -74,7 +74,7 @@
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-text">
                 Message
               </label>
-              <textarea class="appearance-none block w-full h-40 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="text" name="text" placeholder="Message" required></textarea>
+              <textarea class="appearance-none block w-full h-40 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-text" name="text" placeholder="Message" required></textarea>
             </div>
           </div>
           <button class="text-white block w-full bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg font-semibold" type="submit">Send</button>
@@ -121,6 +121,7 @@
     </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
   <script src="./script.js"></script>
