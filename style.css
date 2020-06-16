@@ -1,5 +1,13 @@
-.font-courgette{
+.font-courgette {
     font-family: 'Courgette', cursive;
+}
+
+.font-museo {
+    font-family: 'MuseoModerno', cursive;
+}
+
+.font-bellota {
+    font-family: 'Bellota Text', cursive;
 }
 
 #alert {
