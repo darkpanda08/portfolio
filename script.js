@@ -16,7 +16,7 @@ $(document).ready(function(){
         
         $.ajax({
             method: 'POST',
-            url: 'https://us-central1-my-portfolio-b1b64.cloudfunctions.net/helloWorld/',
+            url: 'https://us-central1-my-portfolio-b1b64.cloudfunctions.net/contactForm/',
             data: {
                 first_name:first_name, 
                 last_name: last_name,
