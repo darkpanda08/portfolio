@@ -20,10 +20,10 @@ $(document).ready(function(){
     $('#contact-form').submit((e) => {
         e.preventDefault();
     
-        var first_name = $('#grid-first-name').val();
+        /*var first_name = $('#grid-first-name').val();
         var last_name = $('#grid-last-name').val();
         var email = $('#grid-email').val();
-        var message = $('#grid-text').val();
+        var message = $('#grid-text').val();*/
 
         $.ajax({
             method: 'POST',
@@ -34,14 +34,22 @@ $(document).ready(function(){
             data: JSON.stringify({
                 id: create_UUID(),
                 timestamp: Math.floor(Date.now() / 1000),
-                first_name:first_name, 
-                last_name: last_name,
-                email: email,
-                message: message
+                first_name: $('#grid-first-name').val(), 
+                last_name: $('#grid-last-name').val(),
+                email: $('#grid-email').val(),
+                message: $('#grid-text').val()
             })
-        }).done(() => {
+        })
+        .done(() => {
             $('#contact-form').trigger("reset");
+            $('#alert').addClass('bg-green-100 border-green-400');
+            $('#alert-text').html('<b class="capitalize">Uhh Ohh !!</b> Looks like error occurred.');
             $('#alert').show();
-        });
+        })
+        .fail(() => {
+            $('#alert').addClass('bg-red-100 border-red-400');
+            $('#alert-text').html('<b class="capitalize">Uhh Ohh !!</b> Looks like error occurred.');
+            $('#alert').show();
+      })
     });
 });
