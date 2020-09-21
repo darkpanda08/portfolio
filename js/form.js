@@ -43,7 +43,7 @@ $(document).ready(function(){
         .done(() => {
             $('#contact-form').trigger("reset");
             $('#alert').addClass('bg-green-100 border-green-400');
-            $('#alert-text').html('<b class="capitalize">Uhh Ohh !!</b> Looks like error occurred.');
+            $('#alert-text').html('<b class="capitalize">Yayyy !!</b> Your message has been sent.');
             $('#alert').show();
         })
         .fail(() => {
