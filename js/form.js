@@ -19,15 +19,10 @@ $(document).ready(function(){
     // To post form data to DynamoDB
     $('#contact-form').submit((e) => {
         e.preventDefault();
-    
-        /*var first_name = $('#grid-first-name').val();
-        var last_name = $('#grid-last-name').val();
-        var email = $('#grid-email').val();
-        var message = $('#grid-text').val();*/
 
         $.ajax({
             method: 'POST',
-            url: 'https://q07ay8y6jc.execute-api.ap-south-1.amazonaws.com/prod/contact-form/',
+            url: 'https://o85n8bzm1i.execute-api.ap-south-1.amazonaws.com/v1/portfolio-contact-form/',
             headers: {
                 "Content-Type":"application/json"
             },
