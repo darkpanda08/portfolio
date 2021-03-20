@@ -9,7 +9,22 @@ function create_UUID(){
     return uuid;
 }
 
+// Function to get IP Address from Cloudflare API
+async function get_ip() {
+    let ip;
+    await $.get('https://www.cloudflare.com/cdn-cgi/trace', (data) => {
+        ip = data.split("\n")[2].split('=')[1]; 
+    })
+    return ip
+}
+
 $(document).ready(function(){
+    let client_ip;
+    
+    // Fetching Client IP from the Promise
+    get_ip()
+        .then(ip => client_ip = ip)
+        .catch(err => console.error(err))
 
     // To close Alert
     $("#alert-close").click(() => {
@@ -32,7 +47,8 @@ $(document).ready(function(){
                 first_name: $('#grid-first-name').val(), 
                 last_name: $('#grid-last-name').val(),
                 email: $('#grid-email').val(),
-                message: $('#grid-text').val()
+                message: $('#grid-text').val(),
+                ip: client_ip
             })
         })
         .done(() => {
