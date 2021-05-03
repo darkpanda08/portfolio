@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vineet Ranjan's Portfolio Website. This is 404 Not Found Error Page.">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="/images/icon/portfolio.png">
-    <title>Vineet Ranjan - 404 Error</title></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vineet Ranjan's Portfolio Website. This is 404 Not Found Error Page.">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="/images/icon/portfolio.png">
+  <title>Vineet Ranjan - 404 Error</title>
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+  </style>
+</head>
 <body>
   <!-- Header -->
   <header class="text-gray-700 body-font">
@@ -44,10 +58,12 @@
     </div>
   </section>
 
+  <div class="spacer"></div>
+
   <!-- Footer -->
-  <footer class="text-gray-700 body-font" style="position: absolute; bottom: 0; width: 100%">
+  <footer class="text-gray-700 body-font">
     <div class="bg-gray-200">
-      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+      <div class="container md:px-5 md:py-6 mx-auto flex items-center sm:flex-row px-2 pt-2 pb-4 flex-col">
         <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">Made with <span role="img">❤️</span> by <strong>Vineet Ranjan</strong></p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a class="ml-3 text-gray-500" href="https://twitter.com/vineetranjan08">

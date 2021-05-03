@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vineet Ranjan's Portfolio Website Home Page. The home page shows my interests in different technologies and my skills.">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital@1&family=Courgette&family=MuseoModerno&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital@1&family=Courgette&family=MuseoModerno&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/images/icon/portfolio.png">
-    <title>Vineet Ranjan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vineet Ranjan's Portfolio Website Home Page. The home page shows my interests in different technologies and my skills.">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital@1&family=Courgette&family=MuseoModerno&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital@1&family=Courgette&family=MuseoModerno&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link rel="icon" href="/images/icon/portfolio.png">
+  <title>Vineet Ranjan</title>
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    .font-courgette {
+      font-family: 'Courgette', cursive;
+    }
+    
+    .font-museo {
+      font-family: 'MuseoModerno', cursive;
+    }
+
+    .font-bellota {
+      font-family: 'Bellota Text', cursive;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -100,11 +124,13 @@
       </div>
     </div>
   </section>
+
+  <div class="spacer"></div>
   
   <!-- Footer -->
   <footer class="text-gray-700 body-font">
     <div class="bg-gray-200">
-      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+      <div class="container md:px-5 md:py-6 mx-auto flex items-center sm:flex-row px-2 pt-2 pb-4 flex-col">
         <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">Made with <span role="img">❤️</span> by <strong>Vineet Ranjan</strong></p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a class="ml-3 text-gray-500" href="https://twitter.com/vineetranjan08">
