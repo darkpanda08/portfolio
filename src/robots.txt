@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vineetranjan.dev/sitemap.xml
